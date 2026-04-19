@@ -71,7 +71,7 @@ public class RestConfig implements RepositoryRestConfigurer {
             entityClasses.add(tempEntityType.getJavaType());
         }
 
-        // Convert the list to an array of classes
+        // Convert list to an array of classes
         Class[] domainTypes = entityClasses.toArray(new Class[0]);
 
         // Expose the IDs for the specified domain types
