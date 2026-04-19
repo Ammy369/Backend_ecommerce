@@ -27,7 +27,7 @@ public class Category {
     @Column(name = "name")
     private String name;
     
-  //mapped by category
+  //cascade type mentioned to ensure that when a category is deleted, all associated products are also deleted to maintain data integrity
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     //return type set because it is more efficient for lookups and ensures uniqueness of products in the category
     private Set<Product> products;
