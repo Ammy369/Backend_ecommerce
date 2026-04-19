@@ -52,6 +52,7 @@ public class RestConfig implements RepositoryRestConfigurer {
             .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedAction));
 
 
+        // Configure CORS settings to allow requests from a specific origin
         // Call method to expose entity IDs in the API responses
         exposeIds(config);
     }
@@ -70,10 +71,17 @@ public class RestConfig implements RepositoryRestConfigurer {
         // The getMetamodel() method retrieves the metamodel of the persistence unit, which contains metadata about the entities. The getEntities() method returns a set of EntityType objects, each representing an entity in the application. We then iterate through this set and add the Java type (class) of each entity to the entityClasses list.
         // The getJavaType() method retrieves the Java class that represents the entity type, and we add it to the entityClasses list. This way, we can dynamically determine which entities are present in the application and expose their IDs without hardcoding each entity class.
         // The getMetamodel() method retrieves the metamodel of the persistence unit, which contains metadata about the entities. The getEntities() method returns a set of EntityType objects, each representing an entity in the application. We then iterate through this set and add the Java type (class) of each entity to the entityClasses list.
+//get the java type of each entity and add it to the list of entity classes
+// The getJavaType() method returns the Java class that represents the entity type
+
+//entity
         // Add each entity's class to the list
         for(EntityType tempEntityType : entities){
             entityClasses.add(tempEntityType.getJavaType());
         }
+        
+        
+        //Array
 
         // Convert list to an array of classes
         Class[] domainTypes = entityClasses.toArray(new Class[0]);
