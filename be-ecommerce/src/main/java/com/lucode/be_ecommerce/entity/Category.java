@@ -25,6 +25,7 @@ public class Category {
     private Long id;
 
     @Column(name = "name")
+    //return type string because it is more efficient for lookups and ensures uniqueness of category names in the database
     private String name;
     
   //cascade type mentioned to ensure that when a category is deleted, all associated products are also deleted to maintain data integrity
