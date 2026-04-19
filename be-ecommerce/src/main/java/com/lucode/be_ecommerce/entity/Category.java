@@ -29,5 +29,6 @@ public class Category {
     
   //mapped by category
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+    //return type set because it is more efficient for lookups and ensures uniqueness of products in the category
     private Set<Product> products;
 }
