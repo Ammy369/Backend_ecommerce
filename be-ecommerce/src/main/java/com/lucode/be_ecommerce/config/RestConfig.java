@@ -65,7 +65,7 @@ public class RestConfig implements RepositoryRestConfigurer {
         // Create a list to hold the entity classes
         List<Class> entityClasses = new ArrayList<>();
 
-
+//entity
         // Add each entity's class to the list
         for(EntityType tempEntityType : entities){
             entityClasses.add(tempEntityType.getJavaType());
