@@ -28,7 +28,7 @@ public class RestConfig implements RepositoryRestConfigurer {
     public RestConfig(EntityManager _entityManager){
         entityManager = _entityManager;
     }
-
+//whats the use of this methods
      // Override method to configure repository REST settings
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
