@@ -25,6 +25,7 @@ public class Category {
     private Long id;
 
     @Column(name = "name")
+    // @NotBlank(message = "Category name is required")
     private String name;
     
   //mapped by category
