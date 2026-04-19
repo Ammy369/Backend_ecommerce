@@ -1,6 +1,6 @@
 # eCommerce Project <Main>
 
-This is an eCommerce project with a frontend built in Angular 17 and a backend built in Spring 3.3.0. The project is structured into two main parts:
+This is an eCommerce project with a frontend built in Angular 17 and a backend built in Spring 3.3.0. The project is structured into two main parts: <Main>
 
 - `fe-ecommerce` (Frontend: Angular 17)
 - `be-ecommerce` (Backend: Spring 3.3.0)
