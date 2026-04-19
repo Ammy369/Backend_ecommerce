@@ -52,6 +52,7 @@ public class RestConfig implements RepositoryRestConfigurer {
             .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedAction));
 
 
+        // Configure CORS settings to allow requests from a specific origin
         // Call method to expose entity IDs in the API responses
         exposeIds(config);
     }
@@ -70,6 +71,9 @@ public class RestConfig implements RepositoryRestConfigurer {
         for(EntityType tempEntityType : entities){
             entityClasses.add(tempEntityType.getJavaType());
         }
+        
+        
+        //Array
 
         // Convert list to an array of classes
         Class[] domainTypes = entityClasses.toArray(new Class[0]);
