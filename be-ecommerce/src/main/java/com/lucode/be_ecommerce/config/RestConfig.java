@@ -41,7 +41,7 @@ public class RestConfig implements RepositoryRestConfigurer {
 
         // Disable for Product API
         config.getExposureConfiguration()
-            .forDomainType(Product.class)
+            .forDomainType(Product.class) // Specify the domain type (entity) for which we want to configure exposure settings
             .withItemExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedAction))
             .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedAction));
 
